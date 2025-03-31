@@ -11,7 +11,12 @@ class SpellChecker:
         txt = replaceChars(txtIn)
         txt = txt.lower()
         self.multiDictionary.loadDic(language)
-        return self.multiDictionary.searchWord(txt)
+        tempo_iniziale = time.time()
+        parole_sbagliate = self.multiDictionary.searchLinWord(txt)
+        tempo_finale = time.time()
+        parole_sbagliate_str = ', '.join(map(str, parole_sbagliate))
+        return print(f"Le parole sbagliate sono: {parole_sbagliate_str}.\n"
+                f"Il tempo di esecuzione dell'operazione è: {tempo_finale-tempo_iniziale}")
 
     def printMenu(self):
         print("______________________________\n" +

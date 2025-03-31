@@ -22,18 +22,17 @@ while(True):
     else:
         if int(txtIn) == 1:
             txtIn = input("Inserisci la tua frase in italiano: ")
-            print(txtIn)
-            a = sc.handleSentence(txtIn,"Italian")
-            print(a)
+            sc.handleSentence(txtIn,"Italian")
+            continue
 
         elif int(txtIn) == 2:
-            txtIn = input("Inserisci la tua frase in Inglese:\n")
-            print(sc.handleSentence(txtIn,"English"))
+            txtIn = input("Inserisci la tua frase in Inglese: ")
+            sc.handleSentence(txtIn,"English")
             continue
 
         elif int(txtIn) == 3:
-            txtIn = input("Inserisci la tua frase in Spagnolo:\n")
-            print(sc.handleSentence(txtIn,"Spanish"))
+            txtIn = input("Inserisci la tua frase in Spagnolo: ")
+            sc.handleSentence(txtIn,"Spanish")
             continue
 
         elif int(txtIn) == 4:

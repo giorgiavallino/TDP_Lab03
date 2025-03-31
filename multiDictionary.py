@@ -19,7 +19,7 @@ class MultiDictionary:
         parole = self.loadDic(language)
         return self.dizionario.printAll(parole)
 
-    def searchWord(self, words):
+    def searchLinWord(self, words):
         parole_txt = words.split() # crea una lista dividendo le parole presenti in un stringa costituita da
         # più parole
         parole_sbagliate = []
@@ -32,9 +32,5 @@ class MultiDictionary:
                 parole_sbagliate.append(parola_txt)
         return parole_sbagliate
 
-
-
-m = MultiDictionary()
-txt = "cry ciao abby monumento bella aamri"
-m.loadDic("Italian")
-print(m.searchWord(txt))
+    def searchDicotWord(self, words):
+        pass
